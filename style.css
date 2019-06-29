@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "StarJedi";
+    src: url("./webfont/starjedi-webfont.woff") format("woff");
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "StarJedi";
+    background: url('https://us.123rf.com/450wm/vitplus/vitplus1601/vitplus160100059/50684523-black-space-with-many-stars-seamless-pattern-texture-background.jpg?ver=6') center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section h1 {
+    background: none;
+    color: black;
+    font-size: 82px;
+    letter-spacing: 8px;
+    text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+
+    animation: h1 10s ease-out;
+} 
+
+@keyframes h1 {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+main section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section form .inputs--container {
+    display: flex;
+    justify-content: center;
+}
+
+main section form .inputs--container h2{
+    font-family: "Open Sans", sans-serif;
+    margin: 10px 30px 10px 30px;
+    font-weight: 800;
+    color: yellow;
+}
+
+main section form .inputs--container input {
+    font-family: 'Open Sans', sans-serif;
+    min-width: 500px;
+    background: #fafafa;
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: block;
+    color: black;
+    padding: 0.8rem;
+    margin: 0 0 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* box-shadow: 5px 10px #9B4B4A; */
+}
+
+main section form .submitForm {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    background: black;
+    border: 1px solid yellow;
+    min-width: 500px;
+    color: yellow;
+    padding: 10px;
+    min-height: 45px;
+
+    font-weight: bolder;
+
+    /* box-shadow: 5px 5px rgb(225, 228, 54); */
+
+    margin: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+main #results--wrapper {
+    flex-direction: row;
+    justify-content: center;
+}
+
+main #results--wrapper .spacing {
+    margin-right: 50px;
+}
+main #results--wrapper img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+main #results--wrapper table tr th {
+    background: white;
+    width: 150px;
+    height: 50px;
+}
+
+main #results--wrapper table tr td {
+    background: white;
+    width: 150px;
+    height: 50px;
+}
+
+
