@@ -1,25 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Github Wars</title>
 </head>
+
 <body>
+    <embed src="Soundtrack.mp3" autostart="true" style="visibility: hidden; width: 100px; height: 100px;">
     <main>
         <section id="inputs--wrapper">
+            <h1>GitHub Wars</h1>
             <form class="inputs--form">
-                <input type="text" name="firstGitInput" class="firstGitInput" placeholder="Digite o Login do usuário">
-                <input type="text" name="secondGitInput" class="secondGitInput" placeholder="Digite o Login do usuário">
+                <div class="inputs--container">
+                    <input type="text" name="firstGitInput" class="firstGitInput"
+                        placeholder="Digite o Login do usuário">
+                    <h2>VS</h2>
+                    <input type="text" name="secondGitInput" class="secondGitInput"
+                        placeholder="Digite o Login do usuário">
+                </div>
+                <p id="error"></p>
                 <input type="submit" name="submitForm" class="submitForm" value="The Force is strong in this one...">
             </form>
         </section>
         <section id="results--wrapper">
             <!-- renderizar tabelas dinamicas aqui dentro-->
+            <div>
+                <img id="firstGitImg" src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._UL1500_.jpg">
+                <table class="spacing">
+                    <tr>
+                        <th>Critério</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                </table>
+                <p id="firstTableTotal"></p>
+            </div>
+
+
+            <div>
+                <img id="secondGitImg" src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._UL1500_.jpg">
+                <table>
+                    <tr>
+                        <th>a</th>
+                        <th>a</th>
+                        <th>a</th>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                </table>
+                <p id="secondTableTotal"></p>
+            </div>
         </section>
     </main>
     <script src="./script.js"></script>
 </body>
+
 </html>
