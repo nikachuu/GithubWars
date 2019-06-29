@@ -23,6 +23,12 @@ function getScore(user) {
   return scores;
 }
 
+function getTotal(scores) {
+  return scores.reduce((total, score) => {
+    return total + score.score;
+  }, 0);
+}
+
 const firstGitInput = document.querySelector("input[name=firstGitInput]");
 const secondGitInput = document.querySelector("input[name=secondGitInput]");
 const submitForm = document.querySelector("input[name=submitForm]");
@@ -31,6 +37,11 @@ const firstUserImg = document.getElementById("firstGitImg");
 const secondUserImg = document.getElementById("secondGitImg");
 const firstUserScoreTable = document.getElementById("firstUserScore");
 const secondUserScoreTable = document.getElementById("secondUserScore");
+const firstUserTotal = document.getElementById("firstUserTotal");
+const secondUserTotal = document.getElementById("secondUserTotal");
+const winnerDisplay = document.getElementById("winner");
+const results = document.getElementById("results--wrapper");
+const winnerContainer = document.querySelector(".winner--wrapper");
 
 submitForm.addEventListener("click", async event => {
   event.preventDefault();
@@ -45,6 +56,7 @@ submitForm.addEventListener("click", async event => {
     secondUserImg.setAttribute("src", secondUser.avatar_url);
     const firstUserScores = getScore(firstUser);
     const secondUserScores = getScore(secondUser);
+    firstUserScoreTable.innerHTML = "";
     firstUserScores.forEach(score => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -54,6 +66,7 @@ submitForm.addEventListener("click", async event => {
       `;
       firstUserScoreTable.appendChild(row);
     });
+    secondUserScoreTable.innerHTML = "";
     secondUserScores.forEach(score => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -63,6 +76,19 @@ submitForm.addEventListener("click", async event => {
       `;
       secondUserScoreTable.appendChild(row);
     });
+    const firstTotal = getTotal(firstUserScores);
+    const secondTotal = getTotal(secondUserScores);
+    firstUserTotal.innerText = firstTotal;
+    secondUserTotal.innerText = secondTotal;
+    if (firstTotal > secondTotal) {
+      winnerDisplay.innerText = firstUser.login;
+    } else if (secondTotal > firstTotal) {
+      winnerDisplay.innerText = secondUser.login;
+    } else {
+      winnerDisplay.innerText = "Both";
+    }
+    results.style.display = "flex";
+    winnerContainer.style.display = "block";
   } catch (error) {
     errorDisplay.innerText = "Informe um jedi existente";
   }

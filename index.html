@@ -18,67 +18,54 @@
       style="visibility: hidden; width: 100px; height: 100px;"
     />
     <main>
-      <section id="inputs--wrapper">
-        <h1>GitHub Wars</h1>
-        <form class="inputs--form">
-          <div class="inputs--container">
-            <input
-              type="text"
-              name="firstGitInput"
-              class="firstGitInput"
-              placeholder="Digite o Login do usuário"
-            />
-            <h2>VS</h2>
-            <input
-              type="text"
-              name="secondGitInput"
-              class="secondGitInput"
-              placeholder="Digite o Login do usuário"
-            />
-          </div>
-          <p id="error"></p>
-          <input
-            type="submit"
-            name="submitForm"
-            class="submitForm"
-            value="The Force is strong in this one..."
-          />
-        </form>
-      </section>
-      <section id="results--wrapper">
-        <!-- renderizar tabelas dinamicas aqui dentro-->
-        <div>
-          <img
-            id="firstGitImg"
-            src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._UL1500_.jpg"
-          />
-          <table class="spacing" id="firstUserScore">
-            <tr>
-              <th>Critério</th>
-              <th>Quantidade</th>
-              <th>Total</th>
-            </tr>
-          </table>
-
-          <p id="firstUserTotal"></p>
+        <section id="inputs--wrapper">
+            <h1>GitHub Wars</h1>
+            <form class="inputs--form">
+                <div class="inputs--container">
+                    <input type="text" name="firstGitInput" class="firstGitInput"
+                        placeholder="Digite o Login do usuário">
+                    <h2>VS</h2>
+                    <input type="text" name="secondGitInput" class="secondGitInput"
+                        placeholder="Digite o Login do usuário">
+                </div>
+                <p id="error"></p>
+                <input type="submit" name="submitForm" class="submitForm" value="The Force is strong in this one...">
+            </form>
+        </section>
+        <section class="winner--wrapper" style="display: none">
+            <h2>
+                <p id="winner"></p>'s force is stronger!
+            </h2>
+        </section>
+        <section id="results--wrapper" style="display: none">
+            <!-- renderizar tabelas dinamicas aqui dentro-->
+            <div style="text-align: center;">
+                <img id="firstGitImg" src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._UL1500_.jpg">
+                <table class="spacing" id="firstUserScore">
+                    <tr>
+                        <th>Critério</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                </table>
+                <p>Total: <span id="firstUserTotal"></span>
+                </p>
+            </div>
         </div>
 
-        <div>
-          <img
-            id="secondGitImg"
-            src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._UL1500_.jpg"
-          />
-          <table id="secondUserScore">
-            <tr>
-              <th>Critério</th>
-              <th>Quantidade</th>
-              <th>Total</th>
-            </tr>
-          </table>
-
-          <p id="secondUserTotal"></p>
-        </div>
-      </section>
+            <div style="text-align: center;">
+                <img id="secondGitImg" src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._UL1500_.jpg">
+                <table id="secondUserScore">
+                    <tr>
+                        <th>Critério</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                </table>
+                <p>Total: <span id="secondUserTotal"></span>
+                </p>
+            </div>
+        </section>
     </main>
     <script src="./script.js"></script>
   </body>
