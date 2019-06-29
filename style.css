@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
 
-    font-family: "StarJedi";
+    font-family: "Open Sans", sans-serif;
     background: url('https://us.123rf.com/450wm/vitplus/vitplus1601/vitplus160100059/50684523-black-space-with-many-stars-seamless-pattern-texture-background.jpg?ver=6') center;
 }
 
@@ -27,6 +27,7 @@ main section {
 }
 
 main section h1 {
+    font-family: "StarJedi";
     background: none;
     color: black;
     font-size: 82px;
@@ -54,6 +55,22 @@ main section form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main .winner--wrapper {
+    animation: h1 10s linear infinite;
+    background: none;
+}
+
+main .winner--wrapper h2,
+main .winner--wrapper h2 #winner {  
+    background: none;  
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+    color: yellow;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
 main section form .inputs--container {
@@ -103,6 +120,7 @@ main section form .submitForm {
 }
 
 main #results--wrapper {
+    margin: 50px 0 50px 0;
     flex-direction: row;
     justify-content: center;
 }
@@ -125,6 +143,13 @@ main #results--wrapper table tr td {
     background: white;
     width: 150px;
     height: 50px;
+}
+
+main #results--wrapper p {
+    color: black;
+    background: white;
+    border: 1px solid black;
+    width: 457px;
 }
 
 
